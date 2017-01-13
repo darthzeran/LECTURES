@@ -1,0 +1,11 @@
+Schemes:
+C(X)
+P(X)
+W(X)
+Facts:
+C('d')
+Rules:
+P(X) :- C(X).
+W(X) :- P(X).
+Queries:
+W(X)?

@@ -1,0 +1,13 @@
+Schemes:
+P(A,B)
+Q(W,R,S)
+R(X,Z)
+Facts:
+P('a','a')
+P('a','b')
+P('a','c')
+Q('a','b','c')
+Rules:
+R(X,Z) :- P(X,Z), Q(X,Y,Z)
+Queries:
+R('a',J)?

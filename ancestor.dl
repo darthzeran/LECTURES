@@ -1,0 +1,12 @@
+Schemes:
+   parent(X,Y) # X is the parent of Y
+   ancester(Q,R) # X is the ancestor of Y
+Facts: 
+   parent('b','m').
+   parent('m','j').
+Rules:
+   ancestor(Q,R) :- parent(Q,R).
+   ancestor(Q,R) :- parent(Q,Z), ancestor(Z,R).
+Queries:
+   ancestor('b','j')?
+   ancestor('b',Z)?

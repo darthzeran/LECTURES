@@ -1,0 +1,23 @@
+Schemes:
+  snap(S,N,A,P)
+  csg(C,S,G)
+  cn(C,N)
+  ncg(N,C,G)
+
+Facts:
+  snap('1','C','1','5').
+  snap('2','P','5','9').
+  snap('3','S','1','5').
+  csg('CS','1','A').
+  csg('CS','2','B').
+  csg('CS','3','C').
+  csg('EE','1','B+').
+  csg('EE','2','B').
+
+Rules:
+  cn(c,n) :- snap(S,n,A,P),csg(c,S,G).
+  ncg(n,c,g) :- snap(S,n,A,P),csg(c,S,g).
+
+Queries:
+  cn('CS101',Name)?
+  ncg('Snoopy',Course,Grade)?

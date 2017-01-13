@@ -1,0 +1,14 @@
+Schemes:   
+   parent(X,Y) # X is the parent of Y
+   sister(X,Y) # X is the sister of Y
+   aunt(Q,R)
+Facts: 
+   parent('b','j').
+   parent('b','k').
+   sister('a','b').
+Rules:
+   aunt(Q,R) :- sister(Q,Z), parent(Z,R).
+Queries:
+   aunt('a','j')?
+   aunt('a',R)?
+

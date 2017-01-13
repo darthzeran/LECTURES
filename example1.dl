@@ -1,0 +1,13 @@
+Schemes:
+J(W)
+C(X)
+P(Y)
+R(Z)
+Facts:
+J('d')
+C('d')
+Rules:
+P(Y) :- J(Y).
+R(Z) :- C(Z), P(Z).
+Queries:
+R(X,Y)?
